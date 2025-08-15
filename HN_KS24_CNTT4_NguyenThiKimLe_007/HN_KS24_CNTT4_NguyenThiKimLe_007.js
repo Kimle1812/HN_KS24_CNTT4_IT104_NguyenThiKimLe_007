@@ -219,7 +219,7 @@ retal.addVehicle(new Car("BWM", 67000, true, ["Điều hòa", "GPS dẫn đườ
 retal.addVehicle(new Motorcycle("Honda", 30000, true, ["Phân phối cao", "Đường dài"], "Bảo hiểm 12 tháng"));
 retal.addVehicle(new Truck("SH", 80000, true, ["Thùng hàng lớn", "Bửng nâng thủy lực"], "Bảo hiểm hàng hóa và phương tiện thương mại"));
 do {
-    choice = +prompt("1. Th\u00EAm kh\u00E1ch h\u00E0ng m\u1EDBi (d\u1EEF li\u1EC7u c\u1EE9ng)\n2. Th\u00EAm ph\u01B0\u01A1ng ti\u1EC7n m\u1EDBi (d\u1EEF li\u1EC7u c\u1EE9ng)\n3. Thu\u00EA xe (d\u1EEF li\u1EC7u c\u1EE9ng)\n4. Tr\u1EA3 xe (d\u1EEF li\u1EC7u c\u1EE9ng)\n5. Hi\u1EC3n th\u1ECB danh s\u00E1ch xe c\u00F2n tr\u1ED1ng\n6. Hi\u1EC3n th\u1ECB danh s\u00E1ch h\u1EE3p \u0111\u1ED3ng c\u1EE7a 1 kh\u00E1ch h\u00E0ng\n7. T\u00EDnh t\u1ED5ng doanh thu\n8. \u0110\u1EBFm s\u1ED1 l\u01B0\u1EE3ng t\u1EEBng lo\u1EA1i xe\n9. T\u00ECm ki\u1EBFm xe theo ID\n10. Hi\u1EC3n th\u1ECB t\u00EDnh n\u0103ng & b\u1EA3o hi\u1EC3m c\u1EE7a 1 xe\n11. Tho\u00E1t ch\u01B0\u01A1ng tr\u00ECnh\nNh\u1EADp l\u1EF1a ch\u1ECDn:");
+    choice = +prompt("1. Th\u00EAm kh\u00E1ch h\u00E0ng m\u1EDBi\n2. Th\u00EAm ph\u01B0\u01A1ng ti\u1EC7n m\u1EDBi (cho ch\u1ECDn lo\u1EA1i: Car, Motorcycle, Truck)\n3. Thu\u00EA xe (ch\u1ECDn kh\u00E1ch h\u00E0ng, ch\u1ECDn xe, nh\u1EADp s\u1ED1 ng\u00E0y)\n4. Tr\u1EA3 xe. 5. Hi\u1EC3n th\u1ECB danh s\u00E1ch xe c\u00F2n tr\u1ED1ng (s\u1EED d\u1EE5ng filter)\n6. Hi\u1EC3n th\u1ECB danh s\u00E1ch h\u1EE3p \u0111\u1ED3ng c\u1EE7a m\u1ED9t kh\u00E1ch h\u00E0ng (s\u1EED d\u1EE5ng filter)\n7. T\u00EDnh v\u00E0 hi\u1EC3n th\u1ECB t\u1ED5ng doanh thu (s\u1EED d\u1EE5ng reduce)\n8. \u0110\u1EBFm s\u1ED1 l\u01B0\u1EE3ng t\u1EEBng lo\u1EA1i xe (s\u1EED d\u1EE5ng reduce ho\u1EB7c map)\n9. T\u00ECm ki\u1EBFm v\u00E0 hi\u1EC3n th\u1ECB th\u00F4ng tin b\u1EB1ng m\u00E3 \u0111\u1ECBnh danh\n10. Hi\u1EC3n th\u1ECB t\u00EDnh n\u0103ng v\u00E0 ch\u00EDnh s\u00E1ch b\u1EA3o hi\u1EC3m c\u1EE7a m\u1ED9t xe (s\u1EED d\u1EE5ng find)\n11. Tho\u00E1t ch\u01B0\u01A1ng tr\u00ECnh.\nM\u1EDDi b\u1EA1n nh\u1EADp l\u1EF1a ch\u1ECDn:");
     switch (choice) {
         case 1:
             retal.addCustomer("Nguyễn Văn A", "vana@gmail.com", "123456789");
@@ -230,10 +230,10 @@ do {
             console.log("Thêm xe thành công!");
             break;
         case 3:
-            retal.rentVehicle(1, 1, 3); // KH ID 1 thuê Xe ID 1 trong 3 ngày
+            retal.rentVehicle(1, 1, 3);
             break;
         case 4:
-            retal.returnVehicle(1); // Trả xe ID 1
+            retal.returnVehicle(1);
             break;
         case 5:
             retal.listAvailableVehicle();

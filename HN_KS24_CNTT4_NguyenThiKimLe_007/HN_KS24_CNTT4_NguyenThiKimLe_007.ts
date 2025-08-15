@@ -230,18 +230,17 @@ retal.addVehicle(new Motorcycle("Honda", 30000, true, ["Phân phối cao", "Đư
 retal.addVehicle(new Truck("SH", 80000, true, ["Thùng hàng lớn", "Bửng nâng thủy lực"], "Bảo hiểm hàng hóa và phương tiện thương mại"));
 
 do {
-    choice = +prompt(`1. Thêm khách hàng mới (dữ liệu cứng)
-2. Thêm phương tiện mới (dữ liệu cứng)
-3. Thuê xe (dữ liệu cứng)
-4. Trả xe (dữ liệu cứng)
-5. Hiển thị danh sách xe còn trống
-6. Hiển thị danh sách hợp đồng của 1 khách hàng
-7. Tính tổng doanh thu
-8. Đếm số lượng từng loại xe
-9. Tìm kiếm xe theo ID
-10. Hiển thị tính năng & bảo hiểm của 1 xe
-11. Thoát chương trình
-Nhập lựa chọn:`)!;
+    choice = +prompt(`1. Thêm khách hàng mới
+2. Thêm phương tiện mới (cho chọn loại: Car, Motorcycle, Truck)
+3. Thuê xe (chọn khách hàng, chọn xe, nhập số ngày)
+4. Trả xe. 5. Hiển thị danh sách xe còn trống (sử dụng filter)
+6. Hiển thị danh sách hợp đồng của một khách hàng (sử dụng filter)
+7. Tính và hiển thị tổng doanh thu (sử dụng reduce)
+8. Đếm số lượng từng loại xe (sử dụng reduce hoặc map)
+9. Tìm kiếm và hiển thị thông tin bằng mã định danh
+10. Hiển thị tính năng và chính sách bảo hiểm của một xe (sử dụng find)
+11. Thoát chương trình.
+Mời bạn nhập lựa chọn:`)!;
 
     switch (choice) {
         case 1:
@@ -253,10 +252,10 @@ Nhập lựa chọn:`)!;
             console.log("Thêm xe thành công!");
             break;
         case 3:
-            retal.rentVehicle(1, 1, 3); // KH ID 1 thuê Xe ID 1 trong 3 ngày
+            retal.rentVehicle(1, 1, 3); 
             break;
         case 4:
-            retal.returnVehicle(1); // Trả xe ID 1
+            retal.returnVehicle(1);
             break;
         case 5:
             retal.listAvailableVehicle();
